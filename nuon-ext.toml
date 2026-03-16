@@ -1,0 +1,8 @@
+[extension]
+name = "render"
+description = "Render app config templates using install state from the Nuon API"
+
+[extension.auth]
+requires_token = true
+requires_org = true
+requires_install = true

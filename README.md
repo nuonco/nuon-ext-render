@@ -23,6 +23,8 @@ nuon-ext-render --file config.tpl > config.yaml
 | `NUON_ORG_ID` | yes | | Organization ID |
 | `NUON_INSTALL_ID` | no | | Install ID (can also use `--install-id` flag) |
 
+An install context is required to render templates. You must provide an install ID via `NUON_INSTALL_ID` or `--install-id`.
+
 ## Template Variables
 
 Templates use Go's [text/template](https://pkg.go.dev/text/template) syntax. The install state (from `GET /v1/installs/{install_id}/state`) is loaded under a root `.nuon` key, matching the convention used across nuon config files.
