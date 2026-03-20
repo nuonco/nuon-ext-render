@@ -14,16 +14,22 @@
 
 Nuon Extension: Utility to render app config files using an install's details from the ctl-api.
 
+## Installation
+
+```bash
+nuon ext install nuonco/nuon-ext-render
+```
+
 ## Usage
 
 ```bash
-nuon-ext-render --file <template-path> [--install-id <id>]
+nuon render --file <template-path> [--install-id <id>]
 ```
 
 Output is written to stdout:
 
 ```bash
-nuon-ext-render --file config.tpl > config.yaml
+nuon render --file config.tpl > config.yaml
 ```
 
 ## Environment Variables
@@ -33,9 +39,11 @@ nuon-ext-render --file config.tpl > config.yaml
 | `NUON_API_URL` | no | `https://ctl.prod.nuon.co` | API base URL |
 | `NUON_API_TOKEN` | yes | | API auth token |
 | `NUON_ORG_ID` | yes | | Organization ID |
-| `NUON_INSTALL_ID` | no | | Install ID (can also use `--install-id` flag) |
+| `NUON_INSTALL_ID` | no | | Install ID (can also use `--install-id` with `nuon render`) |
 
 An install context is required to render templates. You must provide an install ID via `NUON_INSTALL_ID` or `--install-id`.
+
+Use `nuon render --help` for all available flags and options.
 
 ## Template Variables
 
@@ -83,4 +91,10 @@ export NUON_ORG_ID=<your-org-id>
 export NUON_INSTALL_ID=<your-install-id>
 
 GOWORK=off go run . --file example.tpl
+```
+
+For local extension testing with the Nuon CLI:
+
+```bash
+nuon render --file example.tpl
 ```
