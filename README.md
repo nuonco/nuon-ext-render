@@ -1,4 +1,16 @@
-# nuon-ext-render
+<h1 align="center">Nuon Extension: render</h1>
+
+<p align="center">
+  <a href="https://github.com/nuonco/nuon-ext-render/releases"><img src="https://img.shields.io/github/v/release/nuonco/nuon-ext-render?display_name=tag&amp;sort=semver" alt="Release"></a>
+  <a href="https://go.dev/doc/devel/release"><img src="https://img.shields.io/badge/Go-1.25.0-00ADD8?logo=go&amp;logoColor=white" alt="Go Version"></a>
+  <a href="https://pkg.go.dev/github.com/nuonco/nuon-ext-render"><img src="https://img.shields.io/badge/module-github.com%2Fnuonco%2Fnuon--ext--render-2C6BED" alt="Go Module"></a>
+</p>
+
+<p align="center">
+  <a href="https://docs.nuon.co/guides">Nuon Docs</a>
+  |
+  <a href="https://docs.nuon.co/guides/cli-extensions">Nuon Extension Docs</a>
+</p>
 
 Nuon Extension: Utility to render app config files using an install's details from the ctl-api.
 
