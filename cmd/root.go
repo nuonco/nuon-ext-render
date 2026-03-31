@@ -9,6 +9,7 @@ import (
 	"os"
 	"text/template"
 
+	"github.com/Masterminds/sprig/v3"
 	"github.com/spf13/cobra"
 )
 
@@ -105,7 +106,7 @@ func run(cmd *cobra.Command, cfg *config) error {
 		"nuon": state,
 	}
 
-	tmpl, err := template.New("render").Option("missingkey=error").Parse(string(tmplBytes))
+	tmpl, err := template.New("render").Option("missingkey=error").Funcs(sprig.FuncMap()).Parse(string(tmplBytes))
 	if err != nil {
 		return fmt.Errorf("unable to parse template: %w", err)
 	}
